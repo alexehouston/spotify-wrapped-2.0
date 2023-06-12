@@ -19,7 +19,6 @@ export default function App() {
       spotifyInstance.setAccessToken(_spotifyToken);
       spotifyInstance.getMe().then((user) => {
         setUser(user);
-        console.log(user);
       });
       setSpotify(spotifyInstance);
     }
