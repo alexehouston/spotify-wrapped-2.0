@@ -17,19 +17,20 @@ export default function Music({ user, spotify }) {
 
   const [topTracks, setTopTracks] = useState([]);
   const [topArtists, setTopArtists] = useState([]);
-  const [timeRange, setTimeRange] = useState("short_term");
+  const [trackTimeRange, setTrackTimeRange] = useState("short_term");
+  const [artistTimeRange, setArtistTimeRange] = useState("short_term");
   const [trackSlides, setTrackSlides] = useState([]);
   const [artistSlides, setArtistSlides] = useState([]);
   const [trackSlideIndex, setTrackSlideIndex] = useState(0);
   const [artistSlideIndex, setArtistSlideIndex] = useState(0);
 
   useEffect(() => {
-    fetchTopTracksAndArtists(timeRange);
-  }, [spotify, timeRange]);
+    fetchTopTracksAndArtists(trackTimeRange, artistTimeRange);
+  }, [spotify, trackTimeRange, artistTimeRange]);
 
-  const fetchTopTracksAndArtists = (range) => {
+  const fetchTopTracksAndArtists = (trackRange, artistRange) => {
     spotify
-      .getMyTopTracks({ limit: 20, time_range: range })
+      .getMyTopTracks({ limit: 20, time_range: trackRange })
       .then((tracks) => {
         console.log("Top Tracks:", tracks);
         setTopTracks(tracks.items);
@@ -41,7 +42,7 @@ export default function Music({ user, spotify }) {
       });
 
     spotify
-      .getMyTopArtists({ limit: 20, time_range: range })
+      .getMyTopArtists({ limit: 20, time_range: artistRange })
       .then((artists) => {
         console.log("Top Artists:", artists);
         setTopArtists(artists.items);
@@ -63,31 +64,37 @@ export default function Music({ user, spotify }) {
     return chunkedArray;
   };
 
+  const handleTrackTimeRangeClick = (range) => {
+    setTrackTimeRange(range);
+    setTrackSlideIndex(0);
+  };
+
+  const handleArtistTimeRangeClick = (range) => {
+    setArtistTimeRange(range);
+    setArtistSlideIndex(0);
+  };
+
   return (
     <div className="Music">
-      <div className="user">
-        <p className="user-name">Logged In As {user.display_name}</p>
-        <img className="user-img" src={user.images[0].url} alt="User" />
-      </div>
       <div className="top-music">
         <div className="top-tracks">
           <h1>Top Tracks</h1>
           <div className="time-range-buttons">
             <button
-              className={timeRange === "short_term" ? "active" : ""}
-              onClick={() => setTimeRange("short_term")}
+              className={trackTimeRange === "short_term" ? "active" : ""}
+              onClick={() => handleTrackTimeRangeClick("short_term")}
             >
               4 Weeks
             </button>
             <button
-              className={timeRange === "medium_term" ? "active" : ""}
-              onClick={() => setTimeRange("medium_term")}
+              className={trackTimeRange === "medium_term" ? "active" : ""}
+              onClick={() => handleTrackTimeRangeClick("medium_term")}
             >
               6 Months
             </button>
             <button
-              className={timeRange === "long_term" ? "active" : ""}
-              onClick={() => setTimeRange("long_term")}
+              className={trackTimeRange === "long_term" ? "active" : ""}
+              onClick={() => handleTrackTimeRangeClick("long_term")}
             >
               All Time
             </button>
@@ -96,9 +103,7 @@ export default function Music({ user, spotify }) {
             {trackSlides[trackSlideIndex] &&
               trackSlides[trackSlideIndex].map((track, index) => (
                 <li key={index}>
-                  <p className="index">
-                    {(trackSlideIndex * 4) + index + 1}
-                  </p>
+                  <p className="index">{trackSlideIndex * 4 + index + 1}</p>
                   <img
                     className="track-img"
                     src={track.album.images[0].url}
@@ -128,20 +133,20 @@ export default function Music({ user, spotify }) {
           <h1>Top Artists</h1>
           <div className="time-range-buttons">
             <button
-              className={timeRange === "short_term" ? "active" : ""}
-              onClick={() => setTimeRange("short_term")}
+              className={artistTimeRange === "short_term" ? "active" : ""}
+              onClick={() => handleArtistTimeRangeClick("short_term")}
             >
               4 Weeks
             </button>
             <button
-              className={timeRange === "medium_term" ? "active" : ""}
-              onClick={() => setTimeRange("medium_term")}
+              className={artistTimeRange === "medium_term" ? "active" : ""}
+              onClick={() => handleArtistTimeRangeClick("medium_term")}
             >
               6 Months
             </button>
             <button
-              className={timeRange === "long_term" ? "active" : ""}
-              onClick={() => setTimeRange("long_term")}
+              className={artistTimeRange === "long_term" ? "active" : ""}
+              onClick={() => handleArtistTimeRangeClick("long_term")}
             >
               All Time
             </button>
@@ -150,9 +155,7 @@ export default function Music({ user, spotify }) {
             {artistSlides[artistSlideIndex] &&
               artistSlides[artistSlideIndex].map((artist, index) => (
                 <li key={index}>
-                  <p className="index">
-                    {(artistSlideIndex * 4) + index + 1}
-                  </p>
+                  <p className="index">{artistSlideIndex * 4 + index + 1}</p>
                   <img
                     className="artist-img"
                     src={artist.images[0].url}

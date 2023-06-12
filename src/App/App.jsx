@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import SpotifyWebApi from "spotify-web-api-js";
 import Login from "../Login/Login";
-import Music from "../Music/Music"
+import Music from "../Music/Music";
 import "./App.css";
 
 export default function App() {
@@ -46,7 +46,13 @@ export default function App() {
     <div className="App">
       {user ? (
         <>
-          <p className="logout" onClick={handleLogout}>Logout</p>
+          <p className="logout" onClick={handleLogout}>
+            Log Out
+          </p>
+          <div className="user">
+            <img className="user-img" src={user.images[0].url} alt="User" />
+            <p className="user-name">Logged In As {user.display_name}</p>
+          </div>
           <Music user={user} spotify={spotify} />
         </>
       ) : (

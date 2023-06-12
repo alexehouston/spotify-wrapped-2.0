@@ -27,44 +27,65 @@
 }
 
 :root {
-    --spotifygreen: #1DB954;
-    --spotifywhite: #FFFFFF;
-    --spotifyblack: #191414;
+  --spotifygreen: #1db954;
+  --spotifywhite: #ffffff;
+  --spotifyblack: #191414;
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: var(--spotifyblack);
-    margin: 0;
-    font-family: 'Gotham';
-    color: var(--spotifywhite);
+  background-color: var(--spotifyblack);
+  margin: 0;
+  font-family: "Gotham";
+  color: var(--spotifywhite);
 }
 
 a {
-    text-decoration: none;
-    color: var(--spotifywhite);
+  text-decoration: none;
+  color: var(--spotifywhite);
 }
 
-ul, li {
-    list-style-type: none;
-    padding: 0;
+ul,
+li {
+  list-style-type: none;
+  padding: 0;
 }
 
 .logout {
-    color: var(--spotifywhite);
-    background-color: var(--spotifygreen);
-    position: fixed;
-    top: 15px;
-    left: 15px;
-    margin: 0;
-    padding: 5px 10px;
-    border-radius: 20px;
-    font-size: 12px;
+  color: var(--spotifywhite);
+  background-color: var(--spotifygreen);
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  margin: 0;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
 }
 
 .logout:hover {
-    cursor: pointer;
+  cursor: pointer;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+}
+
+.user-img {
+  width: 25px;
+  border-radius: 50%;
+}
+
+.user-name {
+  margin: 0;
+  padding-left: 10px;
+  font-size: 12px;
 }
