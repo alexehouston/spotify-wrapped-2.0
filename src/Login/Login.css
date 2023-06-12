@@ -1,0 +1,23 @@
+.Login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#signIn {
+  font-family: "Gotham";
+  font-weight: bold;
+  letter-spacing: -0.5px;
+  background-color: var(--spotifygreen);
+  padding: 10px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+}
+
+.spotify-logo {
+    width: 100px;
+    margin-left: 10px;
+}

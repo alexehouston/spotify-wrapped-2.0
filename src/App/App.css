@@ -1,0 +1,70 @@
+@font-face {
+  font-family: "Gotham";
+  src: url("../../public/fonts/GothamBook.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("../../public/fonts/GothamBookItalic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("../../public/fonts/GothamBold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("../../public/fonts/GothamBoldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+
+:root {
+    --spotifygreen: #1DB954;
+    --spotifywhite: #FFFFFF;
+    --spotifyblack: #191414;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--spotifyblack);
+    margin: 0;
+    font-family: 'Gotham';
+    color: var(--spotifywhite);
+}
+
+a {
+    text-decoration: none;
+    color: var(--spotifywhite);
+}
+
+ul, li {
+    list-style-type: none;
+    padding: 0;
+}
+
+.logout {
+    color: var(--spotifywhite);
+    background-color: var(--spotifygreen);
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    margin: 0;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.logout:hover {
+    cursor: pointer;
+}
