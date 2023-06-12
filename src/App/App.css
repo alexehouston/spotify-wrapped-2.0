@@ -63,7 +63,7 @@ li {
   margin: 0;
   padding: 5px 10px;
   border-radius: 20px;
-  font-size: 12px;
+  font-size: 1.25vmin;
   font-weight: bold;
 }
 
@@ -87,5 +87,11 @@ li {
 .user-name {
   margin: 0;
   padding-left: 10px;
-  font-size: 12px;
+  font-size: 1.25vmin;
+}
+
+@media screen and (max-width: 500px) {
+    .logout, .user-name {
+        font-size: 2.75vmin;
+    }
 }
