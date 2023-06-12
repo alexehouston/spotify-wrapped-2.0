@@ -32,7 +32,6 @@ export default function Music({ user, spotify }) {
     spotify
       .getMyTopTracks({ limit: 20, time_range: trackRange })
       .then((tracks) => {
-        console.log("Top Tracks:", tracks);
         setTopTracks(tracks.items);
         const slides = chunkArray(tracks.items, 4);
         setTrackSlides(slides);
@@ -44,7 +43,6 @@ export default function Music({ user, spotify }) {
     spotify
       .getMyTopArtists({ limit: 20, time_range: artistRange })
       .then((artists) => {
-        console.log("Top Artists:", artists);
         setTopArtists(artists.items);
         const slides = chunkArray(artists.items, 4);
         setArtistSlides(slides);
