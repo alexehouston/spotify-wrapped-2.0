@@ -3,7 +3,7 @@ import "./Login.css";
 export default function Login() {
   const authEndpoint = "https://accounts.spotify.com/authorize";
   const clientId = "7ea98409438c424fb407d905d5cf18f6";
-  const redirectUri = "https://spotify-wrapped.netlify.app/";
+  const redirectUri = "http://localhost:5173/";
   const scopes = ["user-top-read"];
   const loginUrl = `${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join(
     "%20"
