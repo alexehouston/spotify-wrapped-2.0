@@ -18,6 +18,8 @@ export default function Music({ user, spotify }) {
   const [topTracks, setTopTracks] = useState([]);
   const [topArtists, setTopArtists] = useState([]);
   const [timeRange, setTimeRange] = useState("short_term");
+  const [trackSlides, setTrackSlides] = useState([]);
+  const [artistSlides, setArtistSlides] = useState([]);
   const [trackSlideIndex, setTrackSlideIndex] = useState(0);
   const [artistSlideIndex, setArtistSlideIndex] = useState(0);
 
@@ -31,6 +33,8 @@ export default function Music({ user, spotify }) {
       .then((tracks) => {
         console.log("Top Tracks:", tracks);
         setTopTracks(tracks.items);
+        const slides = chunkArray(tracks.items, 4);
+        setTrackSlides(slides);
       })
       .catch((err) => {
         console.error(err);
@@ -41,23 +45,23 @@ export default function Music({ user, spotify }) {
       .then((artists) => {
         console.log("Top Artists:", artists);
         setTopArtists(artists.items);
+        const slides = chunkArray(artists.items, 4);
+        setArtistSlides(slides);
       })
       .catch((err) => {
         console.error(err);
       });
   };
 
-  const tracksPerPage = 4;
-  const trackSlides = [];
-  for (let i = 0; i < topTracks.length; i += tracksPerPage) {
-    trackSlides.push(topTracks.slice(i, i + tracksPerPage));
-  }
-
-  const artistsPerPage = 4;
-  const artistSlides = [];
-  for (let i = 0; i < topArtists.length; i += artistsPerPage) {
-    artistSlides.push(topArtists.slice(i, i + artistsPerPage));
-  }
+  const chunkArray = (array, size) => {
+    const chunkedArray = [];
+    let index = 0;
+    while (index < array.length) {
+      chunkedArray.push(array.slice(index, index + size));
+      index += size;
+    }
+    return chunkedArray;
+  };
 
   return (
     <div className="Music">
@@ -92,7 +96,9 @@ export default function Music({ user, spotify }) {
             {trackSlides[trackSlideIndex] &&
               trackSlides[trackSlideIndex].map((track, index) => (
                 <li key={index}>
-                  <p className="index">{index + 1}</p>
+                  <p className="index">
+                    {(trackSlideIndex * 4) + index + 1}
+                  </p>
                   <img
                     className="track-img"
                     src={track.album.images[0].url}
@@ -144,7 +150,9 @@ export default function Music({ user, spotify }) {
             {artistSlides[artistSlideIndex] &&
               artistSlides[artistSlideIndex].map((artist, index) => (
                 <li key={index}>
-                  <p className="index">{index + 1}</p>
+                  <p className="index">
+                    {(artistSlideIndex * 4) + index + 1}
+                  </p>
                   <img
                     className="artist-img"
                     src={artist.images[0].url}
