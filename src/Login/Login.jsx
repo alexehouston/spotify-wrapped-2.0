@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import "./Login.css";
 
 export default function Login() {
@@ -19,10 +20,28 @@ export default function Login() {
 
   return (
     <div className="Login">
-      <a href={loginUrl} id="signIn">
-        Sign In With{" "}
-        <img className="spotify-logo" src="assets/Spotify_Logo_RGB_White.png" />
-      </a>
+      <motion.div
+        initial={{ opacity: 0, scale: 0.25 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{
+          duration: 0.5,
+          ease: [0, 1, 0.2, 1],
+          scale: {
+            type: "spring",
+            damping: 5,
+            stiffness: 50,
+            restDelta: 0.001,
+          },
+        }}
+      >
+        <a href={loginUrl} id="signIn">
+          Sign In With{" "}
+          <img
+            className="spotify-logo"
+            src="assets/Spotify_Logo_RGB_White.png"
+          />
+        </a>
+      </motion.div>
     </div>
   );
 }
