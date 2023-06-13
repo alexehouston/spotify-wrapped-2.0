@@ -7,7 +7,7 @@ export default function Login() {
   let redirectUri;
 
   if (window.location.hostname === "localhost") {
-    redirectUri = "http://localhost:5173";
+    redirectUri = "http://localhost:5173/";
   } else {
     redirectUri = "https://spotify-wrapped.netlify.app/";
   }

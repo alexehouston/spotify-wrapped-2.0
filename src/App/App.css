@@ -1,27 +1,27 @@
 @font-face {
   font-family: "Gotham";
-  src: url("../../public/fonts/GothamBook.ttf") format("truetype");
+  src: url("/fonts/GothamBook.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Gotham";
-  src: url("../../public/fonts/GothamBookItalic.ttf") format("truetype");
+  src: url("/fonts/GothamBookItalic.ttf") format("truetype");
   font-weight: normal;
   font-style: italic;
 }
 
 @font-face {
   font-family: "Gotham";
-  src: url("../../public/fonts/GothamBold.ttf") format("truetype");
+  src: url("/fonts/GothamBold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Gotham";
-  src: url("../../public/fonts/GothamBoldItalic.ttf") format("truetype");
+  src: url("/fonts/GothamBoldItalic.ttf") format("truetype");
   font-weight: bold;
   font-style: italic;
 }
