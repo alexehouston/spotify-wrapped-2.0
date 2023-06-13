@@ -7,11 +7,11 @@ export default function Login() {
   let redirectUri;
 
   if (window.location.hostname === "localhost") {
-    redirectUri = "http://localhost:3000";
+    redirectUri = "http://localhost:5173";
   } else {
-    redirectUri = "https://spotify-wrapped.netlify.app";
+    redirectUri = "https://spotify-wrapped.netlify.app/";
   }
-  
+
   const scopes = ["user-top-read"];
   const loginUrl = `${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join(
     "%20"
