@@ -35,7 +35,7 @@ export default function Login() {
         }}
       >
         <a href={loginUrl} id="signIn">
-          Sign In With{" "}
+          Sign In With
           <img
             className="spotify-logo"
             src="assets/Spotify_Logo_RGB_White.png"
