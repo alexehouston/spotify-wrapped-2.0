@@ -68,12 +68,16 @@ export default function Music({ user, spotify }) {
 
   const handleTrackTimeRangeClick = (range) => {
     setTrackTimeRange(range);
-    setTrackSlideIndex(0);
+    setTimeout(() => {
+      setTrackSlideIndex(0);
+    }, 120);
   };
 
   const handleArtistTimeRangeClick = (range) => {
     setArtistTimeRange(range);
-    setArtistSlideIndex(0);
+    setTimeout(() => {
+      setArtistSlideIndex(0);
+    }, 120);
   };
 
   return (
