@@ -11,6 +11,7 @@
   font-weight: bold;
   letter-spacing: -0.5px;
   background-color: var(--spotifygreen);
+  color: var(--spotifywhite);
   padding: 10px;
   border-radius: 25px;
   display: flex;

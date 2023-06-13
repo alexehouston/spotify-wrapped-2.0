@@ -37,7 +37,7 @@
 }
 
 body {
-  background-color: var(--spotifyblack);
+  background-color: var(--spotifywhite);
   margin: 0;
   font-family: "Gotham";
   color: var(--spotifywhite);
