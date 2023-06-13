@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import "./Music.css";
 
+// eslint-disable-next-line
 export default function Music({ user, spotify }) {
   Music.propTypes = {
     user: PropTypes.shape({
@@ -15,8 +16,9 @@ export default function Music({ user, spotify }) {
     }).isRequired,
     spotify: PropTypes.object.isRequired,
   };
-
+  // eslint-disable-next-line
   const [topTracks, setTopTracks] = useState([]);
+  // eslint-disable-next-line
   const [topArtists, setTopArtists] = useState([]);
   const [trackTimeRange, setTrackTimeRange] = useState("short_term");
   const [artistTimeRange, setArtistTimeRange] = useState("short_term");
@@ -27,6 +29,7 @@ export default function Music({ user, spotify }) {
 
   useEffect(() => {
     fetchTopTracksAndArtists(trackTimeRange, artistTimeRange);
+    // eslint-disable-next-line
   }, [spotify, trackTimeRange, artistTimeRange]);
 
   const fetchTopTracksAndArtists = (trackRange, artistRange) => {
