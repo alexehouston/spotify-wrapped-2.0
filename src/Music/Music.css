@@ -148,7 +148,7 @@
   }
 
   .top-music h1 {
-    display: block;
+    width: 100vw;
     font-size: 7vmin;
     padding-bottom: 0;
   }
@@ -178,7 +178,7 @@
 
   .time-range-buttons {
     justify-content: space-around;
-    width: 100%;
+    width: 100vw;
     padding-bottom: 15px;
   }
 
