@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import SpotifyWebApi from "spotify-web-api-js";
-import { motion } from "framer-motion";
 import Login from "../Login/Login";
 import Music from "../Music/Music";
+import "bootstrap/dist/css/bootstrap.css";
 import "./App.css";
 
 export default function App() {
@@ -44,25 +44,17 @@ export default function App() {
   };
 
   return (
-    <div className="App">
+    <div className="App container-fluid d-flex justify-content-center align-items-center vh-100">
       {user ? (
         <>
-          <motion.div
-            initial={{ y: -100, opacity: 0 }}
-            animate={{ y: 0, opacity: 100 }}
-            transition={{ duration: 1 }}
-          >
-            <p className="logout" onClick={handleLogout}>
-              Log Out
-            </p>
-            <div className="user">
-              <img className="user-img" src={user.images[0].url} alt="User" />
-              <p className="user-name">Logged In As {user.display_name}</p>
-            </div>
-          </motion.div>
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 100 }} transition={{ duration: 2 }}>
-            <Music user={user} spotify={spotify} />
-          </motion.div>
+          <p className="logout" onClick={handleLogout}>
+            Log Out
+          </p>
+          <div className="user">
+            <img className="user-img" src={user.images[0].url} alt="User" />
+            <p className="user-name">Logged In As {user.display_name}</p>
+          </div>
+          <Music user={user} spotify={spotify} />
         </>
       ) : (
         <Login />

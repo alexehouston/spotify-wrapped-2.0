@@ -82,16 +82,16 @@ export default function Music({ user, spotify }) {
   };
 
   return (
-    <div className="Music">
+    <div className="container-fluid w-75">
       <motion.div
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 100, y: 0 }}
         transition={{ duration: 1.25 }}
       >
-        <div className="top-music">
-          <div className="top-tracks">
-            <h1>Top Tracks</h1>
-            <div className="time-range-buttons">
+        <div className="d-flex justify-content-around">
+          <div className="d-flex flex-column justify-content-center align-items-center">
+            <h1 className="fs-1 fw-bold pb-3">Top Tracks</h1>
+            <div className="time-range-buttons d-flex justify-content-between pb-3">
               <button
                 className={trackTimeRange === "short_term" ? "active" : ""}
                 onClick={() => handleTrackTimeRangeClick("short_term")}
@@ -111,20 +111,20 @@ export default function Music({ user, spotify }) {
                 All Time
               </button>
             </div>
-            <ul>
+            <ul className="d-flex flex-column h-100">
               {trackSlides[trackSlideIndex] &&
                 trackSlides[trackSlideIndex].map((track, index) => (
-                  <li key={index}>
-                    <p className="index">{trackSlideIndex * 4 + index + 1}</p>
+                  <li className="position-relative py-3" key={index}>
+                    <p className="index position-absolute start-0 top-25 rounded-pill fw-bold text-center p-1">{trackSlideIndex * 4 + index + 1}</p>
                     <img
-                      className="track-img"
+                      className="track-img rounded-pill"
                       src={track.album.images[0].url}
                       alt={track.name}
                     />
-                    <p className="track-name">
+                    <p className="track-name d-inline-block fw-bold text-center ps-5">
                       {track.name}
                       <br />
-                      <span className="track-artist">
+                      <span className="track-artist opacity-50 fw-normal">
                         {track.artists[0].name}
                       </span>
                     </p>
@@ -141,9 +141,9 @@ export default function Music({ user, spotify }) {
               ))}
             </div>
           </div>
-          <div className="top-artists">
-            <h1>Top Artists</h1>
-            <div className="time-range-buttons">
+          <div className="d-flex flex-column justify-content-center align-items-center">
+            <h1 className="fs-1 fw-bold pb-3">Top Artists</h1>
+            <div className="time-range-buttons d-flex justify-content-between pb-3">
               <button
                 className={artistTimeRange === "short_term" ? "active" : ""}
                 onClick={() => handleArtistTimeRangeClick("short_term")}
@@ -163,17 +163,17 @@ export default function Music({ user, spotify }) {
                 All Time
               </button>
             </div>
-            <ul>
+            <ul className="d-flex flex-column h-100">
               {artistSlides[artistSlideIndex] &&
                 artistSlides[artistSlideIndex].map((artist, index) => (
-                  <li key={index}>
-                    <p className="index">{artistSlideIndex * 4 + index + 1}</p>
+                  <li className="position-relative py-3" key={index}>
+                    <p className="index position-absolute start-0 top-25 rounded-pill fw-bold text-center p-1">{artistSlideIndex * 4 + index + 1}</p>
                     <img
-                      className="artist-img"
+                      className="artist-img rounded-pill"
                       src={artist.images[0].url}
                       alt={artist.name}
                     />
-                    <p className="artist-name">
+                    <p className="artist-name d-inline-block fw-bold text-center ps-5">
                       {artist.name}
                       <br />
                     </p>

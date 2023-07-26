@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import "./Login.css";
 
 export default function Login() {
@@ -19,29 +18,15 @@ export default function Login() {
   )}&response_type=token&show_dialog=true`;
 
   return (
-    <div className="Login">
-      <motion.div
-        initial={{ opacity: 0, scale: 0.25 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{
-          duration: 0.5,
-          ease: [0, 1, 0.2, 1],
-          scale: {
-            type: "spring",
-            damping: 5,
-            stiffness: 50,
-            restDelta: 0.001,
-          },
-        }}
+    <div className="d-flex flex-column justify-content-center align-items-center h-100">
+      <a
+        href={loginUrl}
+        id="signIn"
+        className="p-3 rounded-pill d-flex align-items-center"
       >
-        <a href={loginUrl} id="signIn">
-          Sign In With
-          <img
-            className="spotify-logo"
-            src="assets/Spotify_Logo_RGB_White.png"
-          />
-        </a>
-      </motion.div>
+        Sign In With
+        <img className="spotify-logo" src="assets/Spotify_Logo_RGB_White.png" />
+      </a>
     </div>
   );
 }
