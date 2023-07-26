@@ -22,9 +22,9 @@ export default function Login() {
       <a
         href={loginUrl}
         id="signIn"
-        className="p-3 rounded-pill d-flex align-items-center"
+        className="p-3 rounded-pill d-flex align-items-center justify-content-center"
       >
-        Sign In With
+        <span>Sign In With</span>
         <img className="spotify-logo" src="assets/Spotify_Logo_RGB_White.png" />
       </a>
     </div>
