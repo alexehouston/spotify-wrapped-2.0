@@ -1,3 +1,7 @@
+.Music {
+  align-items: center;
+}
+
 .index {
   background-color: var(--spotifygreen);
   width: 25px;
@@ -69,33 +73,8 @@
 
 @media screen and (max-width: 500px) {
   .Music {
-    height: auto;
-  }
-
-  .top-music,
-  .top-artists,
-  .top-tracks {
-    width: 100vw;
-  }
-
-  .top-music {
-    flex-direction: column;
-    row-gap: 5vmin;
-    margin-top: 25vmin;
-  }
-
-  .top-music h1 {
-    width: 100vw;
-    font-size: 7vmin;
-    padding-bottom: 0;
-  }
-
-  .top-music ul {
-    height: auto;
-  }
-
-  .top-music li {
-    height: 25vmin;
+    align-items: normal;
+    margin-top: 7rem;
   }
 
   .index {
@@ -115,8 +94,7 @@
 
   .time-range-buttons {
     justify-content: space-around;
-    width: 100vw;
-    padding-bottom: 15px;
+    width: 80vw;
   }
 
   .carousel-navigation {

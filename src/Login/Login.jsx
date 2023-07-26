@@ -18,7 +18,7 @@ export default function Login() {
   )}&response_type=token&show_dialog=true`;
 
   return (
-    <div className="d-flex flex-column justify-content-center align-items-center h-100">
+    <div className="d-flex flex-column justify-content-center align-items-center vh-100">
       <a
         href={loginUrl}
         id="signIn"

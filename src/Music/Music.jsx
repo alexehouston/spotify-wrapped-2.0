@@ -82,14 +82,14 @@ export default function Music({ user, spotify }) {
   };
 
   return (
-    <div className="container-fluid w-75">
+    <div className="Music container-fluid d-flex justify-content-center vh-100">
       <motion.div
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 100, y: 0 }}
         transition={{ duration: 1.25 }}
       >
-        <div className="d-flex justify-content-around">
-          <div className="d-flex flex-column justify-content-center align-items-center">
+        <div className="d-flex vw-100 justify-content-center flex-wrap">
+          <div className="d-flex flex-column justify-content-center align-items-center px-5 mx-5">
             <h1 className="fs-1 fw-bold pb-3">Top Tracks</h1>
             <div className="time-range-buttons d-flex justify-content-between pb-3">
               <button
@@ -141,7 +141,7 @@ export default function Music({ user, spotify }) {
               ))}
             </div>
           </div>
-          <div className="d-flex flex-column justify-content-center align-items-center">
+          <div className="d-flex flex-column justify-content-center align-items-center px-5 mx-5">
             <h1 className="fs-1 fw-bold pb-3">Top Artists</h1>
             <div className="time-range-buttons d-flex justify-content-between pb-3">
               <button

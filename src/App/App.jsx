@@ -44,7 +44,7 @@ export default function App() {
   };
 
   return (
-    <div className="App container-fluid d-flex justify-content-center align-items-center vh-100">
+    <>
       {user ? (
         <>
           <p className="logout" onClick={handleLogout}>
@@ -59,6 +59,6 @@ export default function App() {
       ) : (
         <Login />
       )}
-    </div>
+    </>
   );
 }
