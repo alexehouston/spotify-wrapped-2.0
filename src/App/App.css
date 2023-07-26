@@ -57,14 +57,7 @@ li {
 .logout {
   color: var(--spotifywhite);
   background-color: var(--spotifygreen);
-  position: fixed;
-  top: 15px;
-  right: 15px;
-  margin: 0;
-  padding: 0.5vmin 1vmin;
-  border-radius: 20px;
   font-size: 1.25vmin;
-  font-weight: bold;
 }
 
 .logout:hover {

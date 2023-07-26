@@ -47,12 +47,12 @@ export default function App() {
     <>
       {user ? (
         <>
-          <p className="logout" onClick={handleLogout}>
+          <p className="logout position-fixed top-0 end-0 m-3 rounded-pill fw-bold text-uppercase" onClick={handleLogout}>
             Log Out
           </p>
-          <div className="user">
+          <div className="d-flex align-items-center m-3">
             <img className="user-img" src={user.images[0].url} alt="User" />
-            <p className="user-name">Logged In As {user.display_name}</p>
+            <p className="user-name">{user.display_name}</p>
           </div>
           <Music user={user} spotify={spotify} />
         </>

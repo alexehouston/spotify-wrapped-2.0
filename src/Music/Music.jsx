@@ -115,7 +115,7 @@ export default function Music({ user, spotify }) {
               {trackSlides[trackSlideIndex] &&
                 trackSlides[trackSlideIndex].map((track, index) => (
                   <li className="position-relative py-3" key={index}>
-                    <p className="index position-absolute start-0 top-25 rounded-pill fw-bold text-center p-1">{trackSlideIndex * 4 + index + 1}</p>
+                    <p className="index fs-1 position-absolute start-0 top-0 rounded-pill fw-bold text-center p-1">{trackSlideIndex * 4 + index + 1}</p>
                     <img
                       className="track-img rounded-pill"
                       src={track.album.images[0].url}
@@ -131,7 +131,7 @@ export default function Music({ user, spotify }) {
                   </li>
                 ))}
             </ul>
-            <div className="carousel-navigation">
+            <div className="carousel-navigation d-flex justify-content-around w-50 my-3">
               {trackSlides.map((_, index) => (
                 <button
                   key={index}
@@ -167,7 +167,7 @@ export default function Music({ user, spotify }) {
               {artistSlides[artistSlideIndex] &&
                 artistSlides[artistSlideIndex].map((artist, index) => (
                   <li className="position-relative py-3" key={index}>
-                    <p className="index position-absolute start-0 top-25 rounded-pill fw-bold text-center p-1">{artistSlideIndex * 4 + index + 1}</p>
+                    <p className="index fs-1 position-absolute start-0 top-0 rounded-pill fw-bold text-center p-1">{artistSlideIndex * 4 + index + 1}</p>
                     <img
                       className="artist-img rounded-pill"
                       src={artist.images[0].url}
@@ -180,7 +180,7 @@ export default function Music({ user, spotify }) {
                   </li>
                 ))}
             </ul>
-            <div className="carousel-navigation">
+            <div className="carousel-navigation d-flex justify-content-around w-50 my-3">
               {artistSlides.map((_, index) => (
                 <button
                   key={index}
