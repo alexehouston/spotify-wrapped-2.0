@@ -1,7 +1,8 @@
 .index {
   color: var(--spotifywhite);
   text-shadow: 0px 3px 5px #000;
-  margin-left: -.25rem;
+  margin-top: 1rem;
+  margin-left: -.5rem;
 }
 
 .artist-img,
