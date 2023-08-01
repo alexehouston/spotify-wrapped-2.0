@@ -11,7 +11,13 @@
 }
 
 .track-name {
+  color: var(--spotifywhite);
   width: 14rem;
+}
+
+.track-artist {
+  color: var(--spotifygreen);
+  font-size: .85rem;
 }
 
 .artist-name {
@@ -21,10 +27,6 @@
 .track-list {
   width: 25rem;
   height: 30rem;
-}
-
-.track-artist {
-  z-index: 999;
 }
 
 .time-range-buttons button {

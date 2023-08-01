@@ -123,10 +123,10 @@ export default function Music({ user, spotify }) {
                       src={track.album.images[0].url}
                       alt={track.name}
                     />
-                    <p className="track-name text-white fw-bold text-center ps-4 mb-0">
+                    <p className="track-name fw-bold text-center ps-4 mb-0">
                       {track.name}
                       <br />
-                      <span className="track-artist opacity-50 fw-normal">
+                      <span className="track-artist fw-normal">
                         {track.artists[0].name}
                       </span>
                     </p>
