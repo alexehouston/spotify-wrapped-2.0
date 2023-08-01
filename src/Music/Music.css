@@ -36,7 +36,11 @@
   border: none;
   opacity: 50%;
   width: 6.5rem;
+  height: 2rem;
   font-size: .9rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .time-range-buttons button.active {
