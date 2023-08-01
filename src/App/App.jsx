@@ -49,7 +49,7 @@ export default function App() {
         <div className="container-fluid vh-100">
           <div className="pt-3 px-2 d-flex flex-row align-items-center justify-content-between">
             <div className="d-flex align-items-center">
-              <img className="w-50 rounded-pill" src={user.images[0].url} alt="User" />
+              <img className="user-img rounded-pill" src={user.images[0].url} alt="User" />
               <p className="user-name ms-3 mb-0">{user.display_name}</p>
             </div>
             <p

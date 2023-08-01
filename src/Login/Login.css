@@ -1,12 +1,15 @@
 #signIn {
+  background-color: var(--spotifygreen);
+}
+
+#signIn p {
   font-family: "Gotham";
   font-weight: bold;
   letter-spacing: -0.5px;
-  background-color: var(--spotifygreen);
   color: var(--spotifywhite);
 }
 
 .spotify-logo {
-    width: 100px;
-    margin-left: 10px;
+  width: 7rem;
+  margin-left: .75rem;
 }

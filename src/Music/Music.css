@@ -65,34 +65,16 @@
 }
 
 @media screen and (max-width: 500px) {
-  .Music {
-    align-items: normal;
-    margin-top: 7rem;
-  }
-
-  .index {
-    font-size: 3.05vmin;
-  }
-
-  .artist-name,
-  .track-name {
-    padding-left: 20px;
-    width: 50vw;
-    font-size: 3.75vmin;
-  }
 
   .track-artist {
     font-size: 3.25vmin;
   }
 
   .time-range-buttons {
-    justify-content: space-around;
     width: 80vw;
   }
 
   .carousel-navigation button {
-    width: 2vmin;
-    height: 2vmin;
     margin-bottom: 3rem;
   }
 }

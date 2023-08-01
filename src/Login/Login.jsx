@@ -24,7 +24,7 @@ export default function Login() {
         id="signIn"
         className="p-3 rounded-pill d-flex align-items-center justify-content-center"
       >
-        <span>Sign In With</span>
+        <p className="mb-0">Sign In With</p>
         <img className="spotify-logo" src="assets/Spotify_Logo_RGB_White.png" />
       </a>
     </div>
