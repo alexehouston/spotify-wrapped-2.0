@@ -24,7 +24,7 @@
 }
 
 .track-artist {
-  font-size: 1.25vmin;
+  z-index: 999;
 }
 
 .time-range-buttons button {
