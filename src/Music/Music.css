@@ -35,14 +35,14 @@
   font-weight: bold;
   border: none;
   opacity: 50%;
-  width: 7rem;
+  width: 6.5rem;
+  font-size: .9rem;
 }
 
 .time-range-buttons button.active {
   background-color: var(--spotifygreen);
   color: #fff;
   border-radius: 25px;
-  padding: .5vmin 0;
   opacity: 100%;
 }
 
