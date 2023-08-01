@@ -58,37 +58,15 @@ li {
   color: var(--spotifywhite);
   background-color: var(--spotifygreen);
   font-size: 1.25vmin;
-}
-
-.logout:hover {
   cursor: pointer;
 }
 
-.user {
-  display: flex;
-  align-items: center;
-  position: fixed;
-  top: 15px;
-  left: 15px;
-}
-
-.user-img {
-  width: 25px;
-  border-radius: 50%;
-}
-
 .user-name {
-  margin: 0;
-  padding-left: 10px;
   font-size: 1.25vmin;
 }
 
 @media screen and (max-width: 500px) {
     .logout, .user-name {
-        font-size: 2.75vmin;
-    }
-
-    .logout {
-      padding: 1vmin 1.5vmin;
+        font-size: 2.8vmin;
     }
 }

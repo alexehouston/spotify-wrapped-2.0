@@ -46,16 +46,21 @@ export default function App() {
   return (
     <>
       {user ? (
-        <>
-          <p className="logout position-fixed top-0 end-0 m-3 rounded-pill fw-bold text-uppercase" onClick={handleLogout}>
-            Log Out
-          </p>
-          <div className="d-flex align-items-center m-3">
-            <img className="user-img" src={user.images[0].url} alt="User" />
-            <p className="user-name">{user.display_name}</p>
+        <div className="container-fluid vh-100">
+          <div className="pt-3 px-2 d-flex flex-row align-items-center justify-content-between">
+            <div className="d-flex align-items-center">
+              <img className="w-50 rounded-pill" src={user.images[0].url} alt="User" />
+              <p className="user-name ms-3 mb-0">{user.display_name}</p>
+            </div>
+            <p
+              className="logout rounded-pill fw-bold text-uppercase py-1 px-2 mb-0"
+              onClick={handleLogout}
+            >
+              Log Out
+            </p>
           </div>
           <Music user={user} spotify={spotify} />
-        </>
+        </div>
       ) : (
         <Login />
       )}
