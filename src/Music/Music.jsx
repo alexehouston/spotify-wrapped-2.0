@@ -91,7 +91,7 @@ export default function Music({ user, spotify }) {
         <div className="d-flex vw-100 justify-content-center flex-wrap">
           <div className="d-flex flex-column justify-content-center align-items-center px-5 mx-5">
             <h1 className="fs-1 fw-bold pb-3">Top Tracks</h1>
-            <div className="time-range-buttons d-flex justify-content-between py-3">
+            <div className="time-range-buttons col-12 d-flex justify-content-between py-3">
               <button
                 className={trackTimeRange === "short_term" ? "active" : ""}
                 onClick={() => handleTrackTimeRangeClick("short_term")}
@@ -147,7 +147,7 @@ export default function Music({ user, spotify }) {
           </div>
           <div className="d-flex flex-column justify-content-center align-items-center px-5 mx-5">
             <h1 className="fs-1 fw-bold pb-3">Top Artists</h1>
-            <div className="time-range-buttons d-flex justify-content-between py-3">
+            <div className="time-range-buttons col-12 d-flex justify-content-between py-3">
               <button
                 className={artistTimeRange === "short_term" ? "active" : ""}
                 onClick={() => handleArtistTimeRangeClick("short_term")}

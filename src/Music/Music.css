@@ -26,10 +26,6 @@
   font-size: 1.25vmin;
 }
 
-.time-range-buttons {
-  width: 20vw;
-}
-
 .time-range-buttons button {
   background: none;
   color: var(--spotifygreen);
@@ -68,10 +64,6 @@
 
   .track-artist {
     font-size: 3.25vmin;
-  }
-
-  .time-range-buttons {
-    width: 80vw;
   }
 
   .carousel-navigation button {
