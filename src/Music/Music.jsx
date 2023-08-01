@@ -96,19 +96,19 @@ export default function Music({ user, spotify }) {
                 className={trackTimeRange === "short_term" ? "active" : ""}
                 onClick={() => handleTrackTimeRangeClick("short_term")}
               >
-                4 Weeks
+                <p className="m-0">4 Weeks</p>
               </button>
               <button
                 className={trackTimeRange === "medium_term" ? "active" : ""}
                 onClick={() => handleTrackTimeRangeClick("medium_term")}
               >
-                6 Months
+                <p className="m-0">6 Months</p>
               </button>
               <button
                 className={trackTimeRange === "long_term" ? "active" : ""}
                 onClick={() => handleTrackTimeRangeClick("long_term")}
               >
-                All Time
+                <p className="m-0">All Time</p>
               </button>
             </div>
             <ul className="track-list d-flex flex-column justify-content-between align-items-center mt-3">
