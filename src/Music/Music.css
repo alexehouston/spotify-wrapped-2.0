@@ -67,6 +67,10 @@
     font-size: 3.25vmin;
   }
 
+  .time-range-buttons button {
+    width: 7rem;
+  }
+
   .carousel-navigation button {
     margin-bottom: 3rem;
   }
