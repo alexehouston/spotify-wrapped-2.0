@@ -115,7 +115,7 @@ export default function Music({ user, spotify }) {
               {trackSlides[trackSlideIndex] &&
                 trackSlides[trackSlideIndex].map((track, index) => (
                   <li className="position-relative py-3 d-flex align-items-center h-25" key={index}>
-                    <p className="index fs-2 position-absolute start-0 top-0 rounded-pill fw-bold text-center p-1">
+                    <p className="index fs-2 fw-bold">
                       {trackSlideIndex * 4 + index + 1}
                     </p>
                     <img
@@ -171,7 +171,7 @@ export default function Music({ user, spotify }) {
               {artistSlides[artistSlideIndex] &&
                 artistSlides[artistSlideIndex].map((artist, index) => (
                   <li className="position-relative py-3 d-flex align-items-center h-25" key={index}>
-                    <p className="index fs-2 position-absolute start-0 top-0 rounded-pill fw-bold text-center p-1">
+                    <p className="index fs-2 fw-bold">
                       {artistSlideIndex * 4 + index + 1}
                     </p>
                     <img
